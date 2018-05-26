@@ -33,6 +33,11 @@ zuul:
       stripPrefix: false
       serviceId: scheduler-service
       sensitiveHeasders:
+    auth-service:
+      path: /auth/**
+      stripPrefix: false
+      serviceId: auth-service
+      sensitiveHeasders:
 
 ---
 
