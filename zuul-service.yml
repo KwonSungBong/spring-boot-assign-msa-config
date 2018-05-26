@@ -34,6 +34,18 @@ zuul:
       serviceId: scheduler-service
       sensitiveHeasders:
 
+security:
+  oauth2:
+    client:
+      clientId: zuulService
+      clientSecret: zuulServiceSecret
+      authorized-grant-types: authorization_code,refresh_token,password
+      scope: openid
+    resource.jwt:
+      key-pair:
+        alias: zuulServiceKey
+        store-password: zuulServicePassword
+
 ---
 
 spring:
