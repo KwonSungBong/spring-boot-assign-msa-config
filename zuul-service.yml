@@ -18,6 +18,21 @@ zuul:
       stripPrefix: false
       serviceId: push-service
       sensitiveHeasders:
+    media-service:
+      path: /media/**
+      stripPrefix: false
+      serviceId: media-service
+      sensitiveHeasders:
+    user-service:
+      path: /user/**
+      stripPrefix: false
+      serviceId: user-service
+      sensitiveHeasders:
+    scheduler-service:
+      path: /scheduler/**
+      stripPrefix: false
+      serviceId: scheduler-service
+      sensitiveHeasders:
 
 ---
 
