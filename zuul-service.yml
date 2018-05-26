@@ -1,2 +1,25 @@
 server:
   port: 8095
+
+zuul:
+  routes:
+    notification-service:
+      path: /notification/**
+      stripPrefix: false
+      serviceId: notification-service
+      sensitiveHeasders:
+    assign-service:
+      path: /assign/**
+      stripPrefix: false
+      serviceId: assign-service
+      sensitiveHeasders:
+    push-service:
+      path: /push/**
+      stripPrefix: false
+      serviceId: push-service
+      sensitiveHeasders:
+
+---
+
+spring:
+  profiles: docker
