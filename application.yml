@@ -2,4 +2,10 @@
 ---
 
 spring:
-  profiles: docker
+  profiles: dev
+
+
+---
+
+spring:
+  profiles: prod
